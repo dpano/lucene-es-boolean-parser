@@ -1,0 +1,41 @@
+{
+  "name": "lucene-es-boolean-parser",
+  "version": "1.0.0",
+  "description": "Converts a boolean query string to a nested object ready to be consumed by angular2-query-builder",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dpano/lucene-es-boolean-parser.git"
+  },
+  "keywords": ["boolean parser", "elasticsearh", "lucene"],
+  "author": "Dimitrios Panopoulos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dpano/lucene-es-boolean-parser/issues"
+  },
+  "homepage": "https://github.com/dpano/lucene-es-boolean-parser#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.0",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.1.0",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.5"
+  }
+}
