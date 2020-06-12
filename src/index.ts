@@ -157,8 +157,8 @@ export class QueryBuilderHelper {
         let parentCount = 0;
         let tmpString = '';
         let rootFound = false;
-        for (let index = 0; index < str.length; index++) {
-            const element = str[index];
+        for (const value of str) {
+            const element = value;
             if (element === '(') {
                 parentCount++;
                 tmpString = tmpString + element;
@@ -183,8 +183,8 @@ export class QueryBuilderHelper {
      */
     private static checkForBalancedBrackets(str: string): void {
         let parentCount = 0;
-        for (let index = 0; index < str.length; index++) {
-            const element = str[index];
+        for (const value of str) {
+            const element = value;
             if (element === '(') {
                 parentCount++;
             } else if (element === ')') {
